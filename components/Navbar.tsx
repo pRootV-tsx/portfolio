@@ -20,9 +20,11 @@ export const Navbar = () => {
 					src={aboutImages[0].image}
 					alt={aboutImages[0].alt}
 				/>
-				<div className="flex flex-col items-start justify-center">
-					<pre className="font-semibold select-none">P-(ROOT)-V-tsx</pre>
-					<p className="text-sm text-zinc-400">Creative Web Developer</p>
+				<div className="flex flex-col text-sm items-start justify-center">
+					<pre className="font-semibold select-none">P-√-v-tsx</pre>
+					<p className="md:hidden text-sm text-zinc-400">
+						Creative Web Developer
+					</p>
 				</div>
 			</Link>
 			<div className="flex gap-2 items-center justify-center ">
