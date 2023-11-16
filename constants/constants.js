@@ -33,10 +33,17 @@ import designChallenge from "@/public/projectImages/dailydesign.png"
 import typography from "@/public/projectImages/typographyposters.png"
 import {
 	BatteryMedium,
+	CoffeeIcon,
 	DribbbleIcon,
 	GithubIcon,
+	Headphones,
 	InstagramIcon,
+	Laptop,
 	Linkedin,
+	Pen,
+	Phone,
+	Tablet,
+	Tangent,
 	TwitchIcon,
 	TwitterIcon,
 	YoutubeIcon,
@@ -160,6 +167,18 @@ const recentProjects = designProjects.slice(0, 5)
 
 // Tools all tools
 
+import {
+	SiAdobe,
+	SiFigma,
+	SiJira,
+	SiVisualstudiocode,
+	SiNotion,
+	SiSpotify,
+	SiPaperspace,
+} from "react-icons/si"
+
+import { FaGlobe, FaWalking } from "react-icons/fa"
+
 const myTools = [
 	// Hardware
 	{
@@ -169,18 +188,24 @@ const myTools = [
 			[
 				{
 					tool: "Apple Macbook Pro 2020 16inch",
+					icon: <Laptop className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 					info: "Where sleek design meets coding dreams, powering creativity with every keystroke. Unleash my code in style!",
 				},
 				{
 					tool: "Redmi Note 9 Pro",
+					icon: <Phone className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 					info: `My pocket powerhouse, capturing moments with flair and running my apps at the speed of my dynamic life. It's not just a phone; it's my creative companion on the go!`,
 				},
 				{
 					tool: "iPad Air",
+					icon: <Tablet className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 					info: `Meet my creativity wingman, rocking sleek vibes and packing the mojo to turn my ideas into pure awesome.`,
 				},
 				{
 					tool: "Boat Airdopes 148",
+					icon: (
+						<Headphones className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />
+					),
 					info: ` My audio sidekick, grooving to the beats of my day and cutting the cords on boring moments. `,
 				},
 			],
@@ -190,34 +215,46 @@ const myTools = [
 		tools: [
 			{
 				tool: "Adobe CC",
+				icon: <SiAdobe className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 				info: "Adobe Photoshop, Adobe Illustrator, Adobe XD, Adobe After Effects, Adobe Premiere Pro, Adobe Lightroom",
 			},
 			{
 				tool: "Figma & FigJam",
+				icon: <SiFigma className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 				info: "Figma for UI/UX Design, FigJam for Brainstorming",
 			},
 			{
 				tool: "Jira",
+				icon: <SiJira className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 				info: "Jira for project management",
 			},
 			{
 				tool: "Procreate",
+				icon: <Pen className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 				info: "Procreate for logo sketches and random doodles",
 			},
 			{
 				tool: "VS Code",
+				icon: (
+					<SiVisualstudiocode className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />
+				),
 				info: "VS Code for coding and for my life :) ",
 			},
 			{
 				tool: "Arc Browser",
+				icon: <FaGlobe className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 				info: " My digital maestro, orchestrating a symphony of seamless web journeys with style. It's not just a browser; ",
 			},
 			{
 				tool: "Notion",
+				icon: <SiNotion className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />,
 				info: "Notion for note taking and planning",
 			},
 			{
 				tool: "Spotify",
+				icon: (
+					<SiSpotify className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />
+				),
 				info: `It's my daily dose of sonic delight! Spinning tracks that match my vibe and transforming routines into a musical realm`,
 			},
 		],
@@ -228,14 +265,23 @@ const myTools = [
 		tools: [
 			{
 				tool: "Pen & Paper",
+				icon: (
+					<SiPaperspace className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />
+				),
 				info: "Pen & Paper for sketching and writing down ideas",
 			},
 			{
-				tool: "Coffee & Tea",
+				tool: "Coffee or Tea",
+				icon: (
+					<CoffeeIcon className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />
+				),
 				info: "Coffee & Tea for energy and continuous work",
 			},
 			{
 				tool: "Sleep & Walk",
+				icon: (
+					<FaWalking className="w-8 h-8 text-zinc-500 dark:text-zinc-400" />
+				),
 				info: "Sleep & Walk for fixing bugs",
 			},
 		],

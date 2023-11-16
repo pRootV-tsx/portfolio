@@ -1,9 +1,9 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import React, { useState } from "react"
+import React, { Component, useState } from "react"
 import { Button } from "./ui/button"
-import { Settings } from "lucide-react"
+import { Globe, Settings, icons } from "lucide-react"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { hardware, myTools, other, software } from "@/constants/constants"
@@ -57,23 +57,45 @@ const Tools = () => {
 				<TabsContent value="all" className="">
 					{myTools.map(tools => {
 						return tools.tools.map((tool, index) => {
-							return <Tool key={index} tool={tool.tool} info={tool.info} />
+							return (
+								<Tool
+									key={index}
+									tool={tool.tool}
+									info={tool.info}
+									icon={tool.icon}
+								/>
+							)
 						})
 					})}
 				</TabsContent>
 				<TabsContent value="hardware">
 					{hardware.map((tool, index) => (
-						<Tool key={index} tool={tool.tool} info={tool.info} />
+						<Tool
+							key={index}
+							tool={tool.tool}
+							info={tool.info}
+							icon={tool.icon}
+						/>
 					))}
 				</TabsContent>
 				<TabsContent value="software">
 					{software.map((tool, index) => (
-						<Tool key={index} tool={tool.tool} info={tool.info} />
+						<Tool
+							key={index}
+							tool={tool.tool}
+							info={tool.info}
+							icon={tool.icon}
+						/>
 					))}
 				</TabsContent>
 				<TabsContent value="other">
 					{other.map((tool, index) => (
-						<Tool key={index} tool={tool.tool} info={tool.info} />
+						<Tool
+							key={index}
+							tool={tool.tool}
+							info={tool.info}
+							icon={tool.icon}
+						/>
 					))}
 				</TabsContent>
 			</Tabs>
@@ -81,11 +103,20 @@ const Tools = () => {
 	)
 }
 
-function Tool({ tool, info }: { tool: string; info: string }) {
+function Tool({
+	tool,
+	info,
+	icon,
+}: {
+	tool: string
+	info: string
+	icon?: React.ReactNode
+}) {
 	return (
-		<div className="w-full flex bg-zinc-100 p-4 py-6 gap-2 shadow-sm  rounded-lg dark:bg-zinc-950 flex-col items-start justify-start ">
+		<div className="w-full flex bg-zinc-100 p-4 py-6 gap-2 shadow-sm  rounded-lg dark:bg-zinc-900 flex-col items-start justify-start ">
+			<>{icon}</>
 			<h3 className="text-xl  font-medium">{tool}</h3>
-			<p className="text-sm text-zinc-500">{info}</p>
+			<p className="text-sm mt-2 text-zinc-500">{info}</p>
 		</div>
 	)
 }
