@@ -55,11 +55,7 @@ const Hero = () => {
 					</ul>
 				</div>
 				<p className="text-gray-500 dark:text-gray-100 mt-6">
-					P-(root)-v-js, the creative persona of Pruthviraj Chauhan. A designer
-					and developer crafting digital experiences with a minimalistic touch.
-					In addition to coding and designing, I also make YouTube videos, where
-					I teach graphic design, creative videos on code, and personal
-					development.
+					P-root-v is a designer, developer, and content creator. Designing minimalistic digital experiences. Explore graphic design, programming tips and tricks on my YouTube channel.
 				</p>
 				<Link className="group" href={"/about"}>
 					<Button
